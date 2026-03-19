@@ -32,6 +32,7 @@ Mechanical enforcement is live right now. `fail_closed_test.py` demonstrates a r
 **Run it yourself**
 ```bash
 python tests/fail_closed_test.py
+```
 
 (Outputs live receipt with Merkle root and optional BTC anchor.)
 Code proof
