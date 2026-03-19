@@ -144,7 +144,7 @@ Z:\helix-hamiltonian\
 
 ## 6. References
 1. Witten, E. (2011). *Knots and Quantum Theory*. Institute for Advanced Study.
-2. Hope, S. (2025). *Atoms as Geometry in Time: A Knot-Theoretic Reconstruction of Matter*.
+2. Hope, S. (2026). *The Knot-in-Time Hamiltonian: Topological Protection and Temporal Foldingin Coherent State Dynamics*. Helix AI Innovations. https://orcid.org/0009-0000-7367-248X
 3. Phys. Rev. A 104, 012216 (2021). *Topological protection in open quantum systems*.
 4. Crocker, S. (1969). *RFC 0001: Host Software*. UCLA.
 
