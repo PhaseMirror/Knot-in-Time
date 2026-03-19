@@ -141,6 +141,7 @@ Z:\helix-hamiltonian\
 │   └── fail_closed_test.py   # Sovereign Sacrifice validation
 ├── pyproject.toml            # The Metabolic Floor (PyPI Metadata)
 ├── LICENSE                   ✔️ Apache 2.0 (The Open-Source Nobel)
+├── community-feedback.md     ✔️ Initial community response to the public circulation of RFC 0001 
 └── README.md                 ✔️ The Global Handshake (Markdown/LaTeX)
 ```
 ---
