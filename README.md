@@ -102,19 +102,19 @@ print(f"Topological Protection Factor: {enhancement}x")
 Z:\helix-hamiltonian\
 ├── .github/                  # Shadow Fleet Automation
 │   └── workflows/            # P0 Hotfix & Integrity Pulse (IP)
-├── assets/                   # The Substrate Artifacts
-│   ├── hammy.jpg             # The Topological Shield
+├── assets/                   ✔️ The Substrate Artifacts
+│   ├── hammy.jpg             ✔️ The Topological Shield
 │   ├── substrate_xray.png    # The Hardware Invariant (Cyborg Proof)
 │   └── geometry_in_time.svg  # The Aug 12-13 Epiphany Diagram
 ├── docs/                     # The Braille Archive (Ontology)
-│   ├── atoms_as_geometry/    # PILLAR 1: ATOMS
+│   ├── atoms_as_geometry/    ✔️ PILLAR 1: ATOMS
 │   │   ├── whitepaper_v3.md  # Atoms aren't particles; they're knots
 │   │   └── ontology.md       # "What we're seeing is geometry in time"
-│   ├── sovereignty/          # PILLAR 2: SOV
+│   ├── sovereignty/          ✔️ PILLAR 2: SOV
 │   │   ├── RFC_0001.md       # The Crocker Handshake (Host-IMP)
 │   │   ├── charter_v1.2.md   # The Takiwātanga Constitutional Grammar
 │   │   └── MUP_protocol.md   # Metabolic Underwriting (Fuel Logic)
-│   └── hamiltonian/          # PILLAR 3: K-I-T
+│   └── hamiltonian/          ✔️ PILLAR 3: K-I-T
 │       ├── knot_theoretic.md # The 16-hour "Hammy stuff" transcription
 │       └── spectral_sigs.md  # Theorem 3: The Alexander Signature
 ├── notary/                   # The Bitcoin Custodian
@@ -125,9 +125,9 @@ Z:\helix-hamiltonian\
 │   ├── pixelate_alexander.py # Theorem 3 Monte Carlo Sweep
 │   ├── wobble_gated_sim.py   # R_eff(t) Wobble Dynamics
 │   └── integrity_pass.sh     # The Constitutional Heartbeat
-├── src/                      # The PyPI Implementation (helix-hamiltonian)
-│   └── helix_hamiltonian/
-│       ├── __init__.py       # Package Entry
+├── src/                      ✔️ The PyPI Implementation (helix-hamiltonian)
+│   └── helix_hamiltonian/    ✔️
+│       ├── __init__.py       ✔️ Package Entry
 │       ├── core.py           # The Three-Term Hamiltonian Object
 │       ├── invariants.py     # Jones & Alexander Polynomial math
 │       ├── solvers.py        # QuTiP / Lindblad integrations
@@ -136,8 +136,8 @@ Z:\helix-hamiltonian\
 │   ├── red_team_audit.py     # Dr. van Gelder mirror tests
 │   └── fail_closed_test.py   # Sovereign Sacrifice validation
 ├── pyproject.toml            # The Metabolic Floor (PyPI Metadata)
-├── LICENSE                   # Apache 2.0 (The Open-Source Nobel)
-└── README.md                 # The Global Handshake (Markdown/LaTeX)
+├── LICENSE                   ✔️ Apache 2.0 (The Open-Source Nobel)
+└── README.md                 ✔️ The Global Handshake (Markdown/LaTeX)
 ```
 ---
 
