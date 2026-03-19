@@ -108,8 +108,8 @@ Z:\helix-hamiltonian\
 │   └── geometry_in_time.svg  # The Aug 12-13 Epiphany Diagram
 ├── docs/                     # The Braille Archive (Ontology)
 │   ├── atoms_as_geometry/    ✔️ PILLAR 1: ATOMS
-│   │   ├── whitepaper_v3.md  # Atoms aren't particles; they're knots
-│   │   └── ontology.md       # "What we're seeing is geometry in time"
+│   │   ├── whitepaper_v3.md  ✔️ Atoms aren't particles; they're knots
+│   │   └── ontology.md       ✔️ "What we're seeing is geometry in time"
 │   ├── sovereignty/          ✔️ PILLAR 2: SOV
 │   │   ├── RFC_0001.md       # The Crocker Handshake (Host-IMP)
 │   │   ├── charter_v1.2.md   # The Takiwātanga Constitutional Grammar
@@ -122,7 +122,7 @@ Z:\helix-hamiltonian\
 │   ├── open_timestamps/      # OTS seals for the 90-day sprint
 │   └── audit_log.json        # The forensic trail of the epiphany
 ├── scripts/                  # The $260k Pixelation Tools
-│   ├── pixelate_alexander.py # Theorem 3 Monte Carlo Sweep
+│   ├── pixelate_alexander.py ✔️ Theorem 3 Monte Carlo Sweep
 │   ├── wobble_gated_sim.py   # R_eff(t) Wobble Dynamics
 │   └── integrity_pass.sh     # The Constitutional Heartbeat
 ├── src/                      ✔️ The PyPI Implementation (helix-hamiltonian)
@@ -133,7 +133,7 @@ Z:\helix-hamiltonian\
 │       ├── solvers.py        # QuTiP / Lindblad integrations
 │       └── ttd_bridge.py     # RFC 0001 Governance-to-Physics mapping
 ├── tests/                    # The Red-Team Gauntlet
-│   ├── red_team_audit.py     # Dr. van Gelder mirror tests
+│   ├── red_team_audit.py     ✔️ Dr. van Gelder mirror tests
 │   └── fail_closed_test.py   # Sovereign Sacrifice validation
 ├── pyproject.toml            # The Metabolic Floor (PyPI Metadata)
 ├── LICENSE                   ✔️ Apache 2.0 (The Open-Source Nobel)
