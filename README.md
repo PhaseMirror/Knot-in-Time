@@ -129,10 +129,10 @@ Z:\helix-hamiltonian\
 ├── src/                      ✔️ The PyPI Implementation (helix-hamiltonian)
 │   └── helix_hamiltonian/    ✔️
 │       ├── __init__.py       ✔️ Package Entry
-│       ├── core.py           # The Three-Term Hamiltonian Object
+│       ├── core.py           ✔️ The Three-Term Hamiltonian Object
 │       ├── invariants.py     # Jones & Alexander Polynomial math
 │       ├── solvers.py        # QuTiP / Lindblad integrations
-│       └── ttd_bridge.py     # RFC 0001 Governance-to-Physics mapping
+│       └── ttd_bridge.py     ✔️ RFC 0001 Governance-to-Physics mapping
 ├── tests/                    # The Red-Team Gauntlet
 │   ├── red_team_audit.py     ✔️ Dr. van Gelder mirror tests
 │   └── fail_closed_test.py   # Sovereign Sacrifice validation
