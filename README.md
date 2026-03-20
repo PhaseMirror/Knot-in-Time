@@ -20,6 +20,15 @@
 This implementation maps the fundamental laws of temporal geometry to the three layers of the **Helix-TTD Governance Framework (RFC 0001)**: Policy, Advisory, and Custodian.
 
 ---
+
+**RFC_0001_v4.pdf | RFC_0001.pdf** is the canonical interface specification for constitutional AI governance. It defines two orthogonal control axes—**Form** (speech act constraints) and **Velocity** (execution pacing)—enforced by a strict **ratification layer**. This structure maps directly onto the three‑term Hamiltonian of the `helix-hamiltonian` framework: `H_free` (policy layer) corresponds to the diagonal constraints of Form; `H_fold` (advisory layer) corresponds to the off‑diagonal coherence of Velocity; and `H_topo` (custodian layer) corresponds to the topological ratification rule that makes governance physically unbypassable.
+
+Version v0.4 introduces the **GICD Upstream Integrity Guard** as a mandatory pre‑initialization scan. Before any Hamiltonian nucleation, the system checks for authority ambiguity, incentive misalignment, cost externalization, and governance capture. If any marker fails, the agent refuses to nucleate—a fail‑closed condition anchored in the knot‑in‑time ontology. This integration elevates the RFC from a protocol specification to a complete constitutional substrate: the “lane” itself must be architecturally sound before any agent can execute.
+
+For the `helix-hamiltonian` repository, the RFC serves as the **governance layer specification** that justifies the Hamiltonian decomposition and provides the formal semantics for the enforcement tests (e.g., `fail_closed_test.py`). Together, the RFC and the Hamiltonian constitute a **cryptographically auditable, structurally governed AI** runtime—where legitimacy precedes computation, and execution is conditional on topological integrity.
+
+---
+
 **"We are not seeing matter in space; we are seeing Geometry in Time."**
 *Release v1.1.1 (Takiwātanga) — The 41-Year Loop is Closed.*
 
