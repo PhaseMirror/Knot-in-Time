@@ -126,7 +126,8 @@ Z:\helix-hamiltonian\
 │   │   └── MUP_protocol.md   # Metabolic Underwriting (Fuel Logic)
 │   └── hamiltonian/          ✔️ PILLAR 3: K-I-T
 │       ├── knot_theoretic.md # The 16-hour "Hammy stuff" transcription
-│       └── spectral_sigs.md  # Theorem 3: The Alexander Signature
+│       └── spectral_sigs_v4.md  ✔️ Theorem 3: The Alexander Signature
+|       └── spectral_sigs_v4.md  ✔️ Theorem 4: Spectral Signatures of Topological Knot Topology
 ├── notary/                   # The Bitcoin Custodian
 │   ├── checkpoints/          # Merkle-anchored state logs
 │   ├── open_timestamps/      # OTS seals for the 90-day sprint
