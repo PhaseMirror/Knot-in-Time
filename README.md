@@ -116,6 +116,8 @@ Z:\helix-hamiltonian\
 │   ├── hammy.jpg             ✔️ The Topological Shield
 │   ├── substrate_xray.jpg    ✔️ The Hardware Invariant (Cyborg Proof)
 │   └── geometry_in_time.jpg  ✔️ The Aug 12-13 Epiphany Diagram
+├── announcements/
+│   └── v1.1.1_takiwatanga_launch.md ✔️ HELIX-CORE v1.1.1 and the Dawn of Takiwātanga
 ├── papers/                   ✔️
 │   └── whitepaper_v3_final_cut.md ✔️ Custody-Before-Trust: A Constitutional Architecture for Multi-Model AI Systems
 ├── docs/                     ✔️ The Braille Archive (Ontology)
