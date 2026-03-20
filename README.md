@@ -108,7 +108,7 @@ Z:\helix-hamiltonian\
 │   └── workflows/            # P0 Hotfix & Integrity Pulse (IP)
 ├── assets/                   ✔️ The Substrate Artifacts
 │   ├── hammy.jpg             ✔️ The Topological Shield
-│   ├── substrate_xray.png    # The Hardware Invariant (Cyborg Proof)
+│   ├── substrate_xray.jpg    ✔️ The Hardware Invariant (Cyborg Proof)
 │   └── geometry_in_time.svg  # The Aug 12-13 Epiphany Diagram
 ├── docs/                     # The Braille Archive (Ontology)
 │   ├── atoms_as_geometry/    ✔️ PILLAR 1: ATOMS
