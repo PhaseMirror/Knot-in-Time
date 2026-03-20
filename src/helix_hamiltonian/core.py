@@ -10,7 +10,30 @@ try:
     import qutip as qt
 except ImportError:
     qt = None  # Sovereign Fallback to NumPy
-    
+# helix-hamiltonian/src/helix_hamiltonian/core.py
+from dataclasses import dataclass
+from typing import Optional
+from .authority import ratify_velocity
+
+@dataclass
+class Interaction:
+    """Constitutional interaction tuple (RFC 0001 v4 §3.1)."""
+    utterance: str
+    form_en: str
+    form_fr: str
+    velocity_en: str
+    velocity_fr: str
+    authority_en: str
+    context: dict
+    jurisdiction: Optional[str] = None
+
+    def __post_init__(self):
+        """Enforce ratification on initialization."""
+        self.velocity_en = ratify_velocity(
+            model_recommended_velocity=self.velocity_en,
+            authority=self.authority_en,
+            jurisdiction=self.jurisdiction
+        )    
 class Interaction:
     def __init__(self, utterance, form_en, form_fr, velocity_en, velocity_fr, authority_en, context):
         self.utterance = utterance
