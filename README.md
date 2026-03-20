@@ -115,7 +115,7 @@ Z:\helix-hamiltonian\
 ├── assets/                   ✔️ The Substrate Artifacts
 │   ├── hammy.jpg             ✔️ The Topological Shield
 │   ├── substrate_xray.jpg    ✔️ The Hardware Invariant (Cyborg Proof)
-│   └── geometry_in_time.svg  # The Aug 12-13 Epiphany Diagram
+│   └── geometry_in_time.jpg  ✔️ The Aug 12-13 Epiphany Diagram
 ├── docs/                     ✔️ The Braille Archive (Ontology)
 │   ├── atoms_as_geometry/    ✔️ PILLAR 1: ATOMS
 │   │   ├── whitepaper_v3.md  ✔️ Atoms aren't particles; they're knots
@@ -126,8 +126,9 @@ Z:\helix-hamiltonian\
 │   │   └── MUP_protocol.md   # Metabolic Underwriting (Fuel Logic)
 │   └── hamiltonian/          ✔️ PILLAR 3: K-I-T
 │       ├── knot_theoretic.md # The 16-hour "Hammy stuff" transcription
-│       └── spectral_sigs_v4.md  ✔️ Theorem 3: The Alexander Signature
-|       └── spectral_sigs_v4.md  ✔️ Theorem 4: Spectral Signatures of Topological Knot Topology
+│       ├── spectral_sigs_v4.md  ✔️ Theorem 3: The Alexander Signature
+|       ├── spectral_sigs_v4.md  ✔️ Theorem 4: Spectral Signatures of Topological Knot Topology
+|       └── merged_transcript_summary_hammy_stuff.md ✔️ WIP
 ├── notary/                   # The Bitcoin Custodian
 │   ├── checkpoints/          # Merkle-anchored state logs
 │   ├── open_timestamps/      # OTS seals for the 90-day sprint
