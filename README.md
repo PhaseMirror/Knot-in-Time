@@ -7,7 +7,13 @@
 [![Community Feedback & Responses](https://img.shields.io/badge/Community%20Feedback-🦉%20Addressed-brightgreen?style=for-the-badge)](community-feedback.md)
 [![RFC 0001](https://img.shields.io/badge/RFC%200001-Standards%20Track-blue?style=for-the-badge)](docs/rfc/0001/)
 
-> **"What we’re really seeing isn’t matter in space… it’s geometry in time."**
+## > **"What we’re really seeing isn’t matter in space… it’s geometry in time."**
+
+<p align="center">
+  <img src="assets/geometry_in_time.jpg" alt="Geometry in Time" width="800">
+  <br>
+  <b>Regime Transition: From Laminar Flow to Topological Lock-In (The Aug 12-13 Epiphany)</b>
+</p>
 
 ## Abstract
 
