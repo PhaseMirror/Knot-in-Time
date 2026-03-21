@@ -9,6 +9,7 @@
 [![Community Feedback](https://img.shields.io🦉-brightgreen?style=flat-square)](community-feedback.md)
 [![RFC 0001](https://img.shields.io)](docs/sovereignty/RFC_0001.md)
 
+
 <p align="center">
   <img src="assets/geometry_in_time.jpg" alt="Geometry in Time" width="800">
   <br>
