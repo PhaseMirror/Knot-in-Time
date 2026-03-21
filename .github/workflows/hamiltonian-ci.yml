@@ -24,6 +24,18 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: L1 Syntactic Guard - Black (Formatting)
+        run: |
+          echo "🦆 Enforcing strict topological formatting..."
+          black --check .
+
+      - name: L1 Syntactic Guard - Ruff (Static Analysis)
+        run: |
+          echo "⚡ Running fast static epistemic verification..."
+          ruff check .
           
       - name: Verify Form Axis (H_free)
-        run: pytest tests/physics/test_h_free.py -v
+        run: |
+          echo "🛡️ Executing Constitutional Physics..."
+          pytest tests/physics/test_h_free.py -v
