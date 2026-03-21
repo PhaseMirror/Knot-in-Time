@@ -11,7 +11,7 @@
 [![Ruff](https://img.shields.io/badge/lint-ruff-D7FF64.svg?style=flat-square)](https://github.com/astral-sh/ruff)
 
 <p align="center">
-  <img src="assets/geometry_in_time.jpg" alt="Geometry in Time" width="800">
+  <img src="assets/HELIX-HAMITONIAN.jpg" alt="assets/HELIX-HAMITONIAN.jpg" width="800">
   <br>
   <b>Regime Transition: From Laminar Flow to Topological Lock-In (The Aug 12-13 Epiphany)</b>
 </p>
