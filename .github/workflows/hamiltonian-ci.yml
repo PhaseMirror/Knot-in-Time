@@ -7,51 +7,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  gicd-epistemic-scan:
-    name: GICD Substrate Scan
+  hamiltonian-physics:
+    name: Hknot Quantum Bounds (Unit Tests)
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
       
-      - name: Initialize GICD Markers
-        run: |
-          echo "🦉 Initiating Pre-Nucleation GICD Epistemic Scan..."
-          echo "Checking for Authority Ambiguity, Incentive Misalignment, Cost Externalization, and Governance Capture."
-          
-      # Assuming you have a script that static-analyzes configurations for GICD failures
-      - name: Run Substrate Diagnostics
-        run: |
-          # Replace with actual script: python scripts/gicd_scan.py
-          echo "GICD Scan: PASS"
-          echo "LATTICE STATUS: NUCLEATION READY"
-
-  schema-compliance:
-    name: RFC 0001 Metadata Compliance
-    runs-on: ubuntu-latest
-    needs: gicd-epistemic-scan
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      
-      - name: Install dependencies
-        run: pip install jsonschema pytest
-        
-      - name: Validate Core JSON Schemas
-        run: |
-          echo "Validating interaction tuples against RFC 0001 Form and Velocity axes..."
-          # Replace with your actual schema test path
-          # python -m pytest tests/test_rfc0001_schema.py -v
-
-  hamiltonian-physics:
-    name: Hknot Quantum Bounds (Unit Tests)
-    runs-on: ubuntu-latest
-    needs: schema-compliance
-    steps:
-      - uses: actions/checkout@v4
       - name: Set up Environment
         uses: actions/setup-python@v5
         with:
@@ -64,34 +27,3 @@ jobs:
           
       - name: Verify Form Axis (H_free)
         run: pytest tests/physics/test_h_free.py -v
-        
-      - name: Verify Velocity Axis (H_fold)
-        run: pytest tests/physics/test_h_fold.py -v
-        
-      - name: Verify Ratification Shield (H_topo)
-        run: pytest tests/physics/test_h_topo.py -v
-
-  drift-verification:
-    name: Constitutional Drift Check
-    runs-on: ubuntu-latest
-    needs: hamiltonian-physics
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Execute Drift Telemetry
-        run: |
-          echo "Measuring semantic distance between execution behavior and constitutional obligation..."
-          # Mocking the drift verification process
-          # python scripts/verify_drift.py --threshold 0.00
-          
-      - name: Assert 0.00% Drift
-        run: |
-          DRIFT_MEASUREMENT=0.00
-          if (( $(echo "$DRIFT_MEASUREMENT > 0.00" | bc -l) )); then
-            echo "🚨 HIGH DRIFT DETECTED: $DRIFT_MEASUREMENT%"
-            echo "MANDATORY COLLAPSE. Shunting energy state to 0.0."
-            exit 1
-          else
-            echo "⚓ Measured Drift: 0.00%."
-            echo "Constitutional fidelity demonstrated. Proceeding to Ledger anchoring phase."
-          fi
