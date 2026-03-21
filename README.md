@@ -5,7 +5,28 @@
 [![Sovereign Status](https://img.shields.io/badge/Sovereignty-Hardened-orange.svg)](#sovereignty--implementation)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--7367--248X-brightgreen?logo=orcid)](https://orcid.org/0009-0000-7367-248X)
 [![Community Feedback & Responses](https://img.shields.io/badge/Community%20Feedback-🦉%20Addressed-brightgreen?style=for-the-badge)](community-feedback.md)
-[![RFC 0001](https://img.shields.io/badge/RFC%200001-Standards%20Track-blue?style=for-the-badge)](docs/rfc/0001/)
+[![RFC 0001](https://img.shields.io/badge/RFC%200001-Standards%20Track-blue?style=for-the-badge)](docs/rfc/0001/) 
+# 🧬 Helix-Hamiltonian: Constitutional Architecture for Sovereign AI
+
+[![PyPI version](https://img.shields.io/pypi/v/helix-hamiltonian.svg)](https://pypi.org/project/helix-hamiltonian/)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Sovereign Status](https://img.shields.io/badge/Sovereignty-Hardened-orange.svg)](#sovereignty--implementation)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0000--7367--248X-brightgreen?logo=orcid)](https://orcid.org/0009-0000-7367-248X)
+[![Community Feedback & Responses](https://img.shields.io/badge/Community%20Feedback-🦉%20Addressed-brightgreen?style=for-the-badge)](community-feedback.md)
+[![RFC 0001](https://img.shields.io/badge/RFC%200001-Standards%20Track-blue?style=for-the-badge)](docs/sovereignty/RFC_0001.md)
+
+# ⚓ Sovereignty Status
+![Sovereignty](https://img.shields.io)
+![Lattice](https://img.shields.io)
+![LivingAI](https://img.shields.io)
+
+# 🔬 Substrate Integrity
+![Integrity Pulse](https://img.shields.io)
+![Red Team Audit](https://img.shields.io)
+![Substrate Void](https://img.shields.io)
+![Latency Horizon](https://img.shields.io)
+
+
 
 <p align="center">
   <img src="assets/geometry_in_time.jpg" alt="Geometry in Time" width="800">
