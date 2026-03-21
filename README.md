@@ -16,6 +16,11 @@
   <b>Regime Transition: From Laminar Flow to Topological Lock-In (The Aug 12-13 Epiphany)</b>
 </p>
 
+
+**The assets/ directory** functions as the visual atlas of Helix-Hamiltonian. It contains the project’s foundational diagrams, explanatory figures, and ratified visual artifacts that translate the theory into something inspectable at a glance. Core images such as geometry_in_time.jpg and hammy.jpg establish the conceptual baseline: temporal flow, topological lock-in, and the three-term Hamiltonian mapped onto the governance layers of Helix-TTD. These are complemented by substrate_xray.jpg, which introduces the physical substrate motif directly and reinforces one of the repository’s central claims: structural integrity is not metaphorical here, it is part of the architecture.
+
+Beyond the core diagrams, the folder expands into a broader readiness and ratification gallery. Files such as LOCK1.png, LOCK2.png, LOCK3.png, ARTICLE_5.jpg, AUDIT.jpg, BASIN.jpg, COLD.jpg, EXPANSION.jpg, FREEDOM.jpg, NATO.jpg, SALAVAT.jpg, TERMINAL.jpg, FOOSBALL.jpg, and 3.png present the project’s language of custody, refusal, audit, failure containment, and topological resilience through a consistent visual system. Taken together, these assets are not decorative extras; they serve as the repository’s visual grammar, combining theory illustration, operational framing, and publication-ready narrative material for readers who need to understand both the mathematics and the constitutional posture of the work.
+
 ## Abstract
 
 `helix-hamiltonian` is a theoretical and computational framework that realizes the **"knot-in-time"** ontology. It proposes that stable quantum states (atoms) and intelligent agents (sovereign nodes) correspond to topologically knotted configurations of temporal flow. By encoding knot invariants directly into the energy landscape, this framework achieves **Topological Quantum Coherence**, providing an exponential suppression of decoherence.
