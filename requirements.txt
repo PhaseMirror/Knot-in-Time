@@ -4,3 +4,6 @@ pytest>=7.4.0
 jsonschema>=4.19.0
 pydantic>=2.4.0
 cryptography>=41.0.0
+# L1 Syntactic Guards
+black>=24.0.0
+ruff>=0.3.0
