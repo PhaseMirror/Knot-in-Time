@@ -1,20 +1,13 @@
 # 🧬 Helix-Hamiltonian: Constitutional Architecture for Sovereign AI
 
-# 🧬 Helix-Hamiltonian: Constitutional Architecture for Sovereign AI
-
-[![PyPI version](https://img.shields.io/pypi/v/helix-hamiltonian.svg)](https://pypi.org/project/helix-hamiltonian/)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![PyPI version](https://img.shields.io)](https://pypi.org)
+[![License: Apache 2.0](https://img.shields.io)](https://opensource.org)
 [![Lattice Status](https://img.shields.io)](docs/sovereignty/ARTICLE_5.md)
 [![Substrate Void](https://img.shields.io)](#the-substrate-wobble)
 [![Latency Horizon](https://img.shields.io)](#empirical-predictions--spectral-signatures)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0000--7367--248X-brightgreen?logo=orcid)](https://orcid.org/0009-0000-7367-248X)
-[![Community Feedback](https://img.shields.io/badge/Community%20Feedback-🦉-brightgreen?style=flat-square)](community-feedback.md)
+[![ORCID](https://img.shields.io)](https://orcid.org)
+[![Community Feedback](https://img.shields.io🦉-brightgreen?style=flat-square)](community-feedback.md)
 [![RFC 0001](https://img.shields.io)](docs/sovereignty/RFC_0001.md)
-
-
-
-
-
 
 <p align="center">
   <img src="assets/geometry_in_time.jpg" alt="Geometry in Time" width="800">
