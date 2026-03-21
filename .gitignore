@@ -1,11 +1,31 @@
-# =================================================================
-# IDENTITY: .gitignore (SOVEREIGN_BARRIER)
-# VERSION:  v1.3.0 (RESILIENT FORTRESS)
-# ORIGIN:   Stephen Hope (0009-0000-7367-248X)
-# OBJECTIVE: Prevent metabolic exfiltration and protect Custodian keys.
-# =================================================================
+# ==========================================
+# HELIX-TTD PERIMETER INGRESS FILTER (.gitignore)
+# ==========================================
 
-# --- PILLAR 0: Python Substrate ---
+# 1. PII, SECRETS, & SOVEREIGNTY LEAKAGE PREVENTION
+# ------------------------------------------
+# Strictly blocks credentials, local audit envelopes, and PII dumps
+.env
+.env.*
+*.pem
+*.key
+*.cert
+secrets.json
+credentials.json
+# Block local Helix/DBC artifacts (prevent orphaned identities)
+dbc_store/
+hsm_local_state/
+audit_receipts_local/
+*.log
+# Block raw dataset extracts that might contain PII user prompts
+*.csv
+*.tsv
+*.jsonl
+*.parquet
+
+# 2. PYTHON SUBSTRATE (Execution Artifacts)
+# ------------------------------------------
+# Prevents local physics engine state from corrupting the repo
 __pycache__/
 *.py[cod]
 *$py.class
@@ -27,53 +47,38 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
-# --- PILLAR 1: Sovereign Keys (CUSTODIAN ONLY) ---
-# Secrets MUST NOT leave the Quebec Rack.
-*.key
-*.pem
-*.pub
-*.cert
-vault_secrets.json
-notary/keys/
-.env
-.venv
-env/
+# 3. VIRTUAL ENVIRONMENTS (Local Containment)
+# ------------------------------------------
 venv/
+env/
+.venv/
 ENV/
+env.bak/
+venv.bak/
 
-# --- PILLAR 2: Metabolic Floor (SATOSHI DATA) ---
-# Do not commit the fuel tank to the shadow fleet.
-notary/local_wallet/
-notary/bitcoin_node_logs/
-scripts/fuel_status.json
-MUP_replenishment_log.csv
-
-# --- PILLAR 3: Pixelation Engine ($260k RAW DATA) ---
-# Theorem 3 generates terabytes. 
-# We commit the NOTARIZED ROOTS only. We ignore the RAW PIXELS.
-scripts/raw_spectral_data/
-scripts/monte_carlo_dumps/
-*.npy
-*.npz
-*.h5
-*.mat
-
-# --- PILLAR 4: Helix-TTD / EVAC Ops ---
-# Temporary state continuity during "The Wobble"
-notary/checkpoints/tmp_*
-notary/audit_log_backups/
-notary/desync_quarantine/
-
-# --- PILLAR 5: Developer Environmental Noise ---
-.vscode/
-.idea/
-*.swp
+# 4. TESTING & LINTING CACHE (Ruff, Black, Pytest)
+# ------------------------------------------
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.swn
 *.swo
-.DS_Store
-Z_DRIVE_INTERNAL_NOTES.txt
+*.swp
 
-# =================================================================
-# FOOTER: CUSTODIAL INTEGRITY MAINTAINED. ⚓️🚀🦆
-# =================================================================
+# 5. IDE & OS METADATA
+# ------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
