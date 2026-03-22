@@ -6,7 +6,7 @@ on:
 
 env:
   # 🚀 FORCE JAVASCRIPT ACTIONS TO NODE 24
-  # Prevents substrate deprecation and ensures high-velocity execution.
+  # Aligns with the June 2026 mandate and ensures high-velocity execution.
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
         run: |
           sed -i '1s/^\xEF\xBB\xBF//' pyproject.toml
           sed -i 's/\r$//' pyproject.toml
-          echo "✅ Substrate sanitized: BOM and CRLF removed."
+          echo "✅ Substrate sanitized: BOM and CRLF removed from pyproject.toml"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,35 +33,12 @@ jobs:
 
       # 🔬 THE SUBSTRATE AUDIT
       - name: Run Red Team Audit
-        run: pytest tests/test_red_team_audit.py
+        run: pytest tests/test_red_team_audit.py # Verify 17% void & 53cm decay metrics
 
       # 🛡️ THE FEYNMAN SHIELD CHECK
       - name: Run Feynman Shield Test
-        run: pytest tests/test_feynman_shield.py
+        run: pytest tests/test_feynman_shield.py # Verify d/dt < 0.17 threshold
 
-      - name: Build Package
-        run: python -m build
-
-      - name: Store Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: python-package-distributions
-          path: dist/
-
-  publish-pypi:
-    needs: audit-and-build
-    runs-on: ubuntu-latest
-    environment: pypi
-    permissions:
-      id-token: write # Required for Trusted Publishing
-    steps:
-      - name: Download Artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: python-package-distributions
-          path: dist/
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
       - name: Build Package
         run: python -m build
 
