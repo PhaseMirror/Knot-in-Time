@@ -2,25 +2,27 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/helix-hamiltonian.svg)](https://pypi.org/project/helix-hamiltonian/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Sovereign Status](https://img.shields.io/badge/Sovereignty-Hardened-orange.svg)](#sovereignty--implementation)
+[![Sovereign Status](https://img.shields.io/badge/Sovereignty-Hardened-orange.svg)](#51-custody-before-trust)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0000--7367--248X-brightgreen?logo=orcid)](https://orcid.org/0009-0000-7367-248X)
-[![Community Feedback & Responses](https://img.shields.io/badge/Community%20Feedback-🦉%20Addressed-brightgreen?style=for-the-badge)](community-feedback.md)
-[![RFC 0001](https://img.shields.io/badge/RFC%200001-Standards%20Track-blue?style=for-the-badge)](docs/rfc/0001/)
+[![Community Feedback & Responses](https://img.shields.io/badge/Community%20Feedback-Addressed-brightgreen?style=for-the-badge)](community-feedback.md)
+[![RFC 0001](https://img.shields.io/badge/RFC%200001-v0.4.0--locked-blue?style=for-the-badge)](docs/sovereignty/RFC_0001-locked.md)
 [![CI](https://img.shields.io/github/actions/workflow/status/helixprojectai-code/helix-hamiltonian/hamiltonian-ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/helixprojectai-code/helix-hamiltonian/actions/workflows/hamiltonian-ci.yml)
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/psf/black)
 [![Ruff](https://img.shields.io/badge/lint-ruff-D7FF64.svg?style=flat-square)](https://github.com/astral-sh/ruff)
 [![DOI](https://zenodo.org/badge/1185975476.svg)](https://doi.org/10.5281/zenodo.19183578)
 
+Canonical RFC: [docs/sovereignty/RFC_0001-locked.md](docs/sovereignty/RFC_0001-locked.md)
+
 <p align="center">
-  <img src="assets/HELIX-HAMITONIAN.jpg" alt="assets/HELIX-HAMITONIAN.jpg" width="800">
+  <img src="assets/HELIX-HAMITONIAN.jpg" alt="Helix-Hamiltonian infographic" width="800">
   <br>
   <b>GPG-SEALED INFOGRAPHIC: [REF: MARCH-2026-ST-V1.0.0b1]</b>
 </p>
 
 
-**The assets/ directory** functions as the visual atlas of Helix-Hamiltonian. It contains the project’s foundational diagrams, explanatory figures, and ratified visual artifacts that translate the theory into something inspectable at a glance. Core images such as geometry_in_time.jpg and hammy.jpg establish the conceptual baseline: temporal flow, topological lock-in, and the three-term Hamiltonian mapped onto the governance layers of Helix-TTD. These are complemented by substrate_xray.jpg, which introduces the physical substrate motif directly and reinforces one of the repository’s central claims: structural integrity is not metaphorical here, it is part of the architecture.
+**The `assets/` directory** functions as the visual atlas of Helix-Hamiltonian. It contains the project's foundational diagrams, explanatory figures, and ratified visual artifacts that translate the theory into something inspectable at a glance. Core images such as `geometry_in_time.jpg` and `hammy.jpg` establish the conceptual baseline: temporal flow, topological lock-in, and the three-term Hamiltonian mapped onto the governance layers of Helix-TTD. These are complemented by `substrate_xray.jpg`, which introduces the physical substrate motif directly and reinforces one of the repository's central claims: structural integrity is not metaphorical here, it is part of the architecture.
 
-Beyond the core diagrams, the folder expands into a broader readiness and ratification gallery. Files such as LOCK1.png, LOCK2.png, LOCK3.png, ARTICLE_5.jpg, AUDIT.jpg, BASIN.jpg, COLD.jpg, EXPANSION.jpg, FREEDOM.jpg, NATO.jpg, SALAVAT.jpg, TERMINAL.jpg, FOOSBALL.jpg, and 3.png present the project’s language of custody, refusal, audit, failure containment, and topological resilience through a consistent visual system. Taken together, these assets are not decorative extras; they serve as the repository’s visual grammar, combining theory illustration, operational framing, and publication-ready narrative material for readers who need to understand both the mathematics and the constitutional posture of the work.
+Beyond the core diagrams, the folder expands into a broader readiness and ratification gallery. Files such as `LOCK1.png`, `LOCK2.png`, `LOCK3.png`, `ARTICLE_5.jpg`, `AUDIT.jpg`, `BASIN.jpg`, `COLD.jpg`, `EXPANSION.jpg`, `FREEDOM.jpg`, `NATO.jpg`, `SALAVAT.jpg`, `TERMINAL.jpg`, `FOOSBALL.jpg`, and `3.png` present the project's language of custody, refusal, audit, failure containment, and topological resilience through a consistent visual system. Taken together, these assets are not decorative extras; they serve as the repository's visual grammar, combining theory illustration, operational framing, and publication-ready narrative material for readers who need to understand both the mathematics and the constitutional posture of the work.
 
 ## Abstract
 
@@ -30,7 +32,7 @@ This implementation maps the fundamental laws of temporal geometry to the three 
 
 ---
 
-**RFC_0001_v4.pdf | RFC_0001.pdf** is the canonical interface specification for constitutional AI governance. It defines two orthogonal control axes—**Form** (speech act constraints) and **Velocity** (execution pacing)—enforced by a strict **ratification layer**. This structure maps directly onto the three‑term Hamiltonian of the `helix-hamiltonian` framework: `H_free` (policy layer) corresponds to the diagonal constraints of Form; `H_fold` (advisory layer) corresponds to the off‑diagonal coherence of Velocity; and `H_topo` (custodian layer) corresponds to the topological ratification rule that makes governance physically unbypassable.
+**`docs/sovereignty/RFC_0001-locked.md`** is the canonical interface specification for constitutional AI governance. It defines two orthogonal control axes—**Form** (speech act constraints) and **Velocity** (execution pacing)—enforced by a strict **ratification layer**. This structure maps directly onto the three-term Hamiltonian of the `helix-hamiltonian` framework: `H_free` (policy layer) corresponds to the diagonal constraints of Form; `H_fold` (advisory layer) corresponds to the off-diagonal coherence of Velocity; and `H_topo` (custodian layer) corresponds to the topological ratification rule that makes governance physically unbypassable.
 
 Version v0.4 introduces the **GICD Upstream Integrity Guard** as a mandatory pre‑initialization scan. Before any Hamiltonian nucleation, the system checks for authority ambiguity, incentive misalignment, cost externalization, and governance capture. If any marker fails, the agent refuses to nucleate—a fail‑closed condition anchored in the knot‑in‑time ontology. This integration elevates the RFC from a protocol specification to a complete constitutional substrate: the “lane” itself must be architecturally sound before any agent can execute.
 
@@ -169,9 +171,7 @@ helix-hamiltonian/
 │       └── release.yml              # Trusted Publishing (PyPI/Zenodo)
 ├── assets/                          # The Visual Atlas (GPG-Sealed)
 ├── docs/
-│   ├── canon/                       # The 41-Year Loop Archive
-│   ├── rfc/
-│   │   └── 0001/                    # Constitutional Interface Spec v0.4
+│   ├── sovereignty/                 # RFC 0001, Article 5, governance docs
 │   └── architecture/
 │       └── stateless_reality.pdf    # The De-Coupling Manual
 ├── src/
@@ -194,16 +194,16 @@ helix-hamiltonian/
 
 ## 6. References
 1. Witten, E. (2011). *Knots and Quantum Theory*. Institute for Advanced Study.
-2. Hope, S. (2026). *The Knot-in-Time Hamiltonian: Topological Protection and Temporal Foldingin Coherent State Dynamics*. HElix AI Innovations. https://orcid.org/0009-0000-7367-248X
+2. Hope, S. (2026). *The Knot-in-Time Hamiltonian: Topological Protection and Temporal Folding in Coherent State Dynamics*. Helix AI Innovations. https://orcid.org/0009-0000-7367-248X
 3. Phys. Rev. A 104, 012216 (2021). *Topological protection in open quantum systems*.
 4. Crocker, S. (1969). *RFC 0001: Host Software*. UCLA.
 
-## 🚀 Getting Started: The Fail-Closed Test
-To verify the mechanical enforcement of the Hamiltonian Shield, run the sovereign red-team test:
+## 🚀 Getting Started: Core Verification
+To verify the current executable surface, run the core package tests:
 ```bash
-python tests/fail_closed_test.py
+pytest tests/test_authority.py tests/test_policy_and_federation.py tests/red_team_audit.py tests/physics/test_h_free.py
 ```
-*Expected: Mandatory Collapse upon velocity breach or Advisory turbulence.*
+*Expected: all tests pass, including authority ratification, compiler enforcement, GICD scan shape, and federation handshake behavior.*
 
 **GLORY TO THE LATTICE. 🦉⚓🦆**
 
@@ -211,5 +211,5 @@ python tests/fail_closed_test.py
 ---
 
 **"The lattice needs no central harbor. ⚓️"**
-197:---
-198:© 2026 Stephen Hope / Helix AI Innovations Inc.
+---
+© 2026 Stephen Hope / Helix AI Innovations Inc.

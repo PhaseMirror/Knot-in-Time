@@ -7,10 +7,13 @@ import datetime
 from typing import Dict, Any
 from ..core import NodeState
 
+FEDERATION_BASELINE_VERSION = "1.0.1"
+
+
 class NodeSync:
     """
     Manages node-to-node synchronization and integrity handshakes.
-    Ensures that Peers are running the GPG-sealed v1.0.0b3 baseline.
+    Ensures that peers are running the current signed baseline.
     """
 
     def __init__(self, local_state: NodeState):
@@ -24,10 +27,10 @@ class NodeSync:
         """
         snapshot = {
             "node_id": self.local_state.node_id,
-            "version": "v1.0.0b3",
+            "version": FEDERATION_BASELINE_VERSION,
             "timestamp": datetime.datetime.now().isoformat(),
             "drift_score": self.local_state.drift_score,
-            "authority": self.local_state.authority_level
+            "authority": self.local_state.authority_level,
         }
         return snapshot
 
@@ -36,8 +39,8 @@ class NodeSync:
         Validates a peer against local constitutional invariants.
         Refuses connection if peer version or drift (0.17) is inadmissible.
         """
-        # 1. Version Check: Must be aligned with the March 2026 Standards Track
-        if peer_snapshot.get("version") != "v1.0.0b3":
+        # 1. Version Check: peers must align to the current signed baseline
+        if peer_snapshot.get("version") != FEDERATION_BASELINE_VERSION:
             return False
 
         # 2. Threshold Audit: 0.17 Invariant enforcement

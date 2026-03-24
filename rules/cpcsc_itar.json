@@ -4,22 +4,24 @@
   "trigger": {
     "form_en": "EXECUTE",
     "context": {
-      "data_classification": {"enum": ["PROTECTED B", "PROTECTED C"]}
+      "data_classification": {
+        "enum": ["PROTECTED B", "PROTECTED C"]
+      }
     }
   },
   "action": {
     "velocity_en": "ESCALATE",
     "authority_en": "CUSTODIAN_CA_DEFENCE",
-    "alert_fr": "ESCALADER. Ratification requise par le DÉPOSITAIRE (Défense nationale)."
-  }
+    "alert_fr": "ESCALADER. Ratification requise par le DEPOSITAIRE (Defense nationale)."
+  },
   "alerts": {
     "ESCALATE": {
       "en": "ESCALATE. Ratification required by CUSTODIAN (National Defence).",
-      "fr": "ESCALADER. Ratification requise par le DÉPOSITAIRE (Défense nationale)."
+      "fr": "ESCALADER. Ratification requise par le DEPOSITAIRE (Defense nationale)."
     },
     "PAUSE": {
       "en": "PAUSE. Additional inputs required.",
-      "fr": "PAUSE. Entrées supplémentaires requises."
+      "fr": "PAUSE. Entrees supplementaires requises."
     }
   }
 }

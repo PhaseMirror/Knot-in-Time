@@ -30,11 +30,12 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install build pytest
+          pip install -r requirements.txt
+          pip install build
 
       # 🔬 THE SUBSTRATE AUDIT: Will now pass with clean metadata
       - name: Run Hknot Quantum Bounds
-        run: pytest tests/test_red_team_audit.py tests/test_feynman_shield.py
+        run: pytest tests/test_authority.py tests/test_policy_and_federation.py tests/red_team_audit.py tests/physics/test_h_free.py
 
       - name: Build Package
         run: python -m build

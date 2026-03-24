@@ -38,4 +38,4 @@ jobs:
       - name: Verify Form Axis (H_free)
         run: |
           echo "🛡️ Executing Constitutional Physics..."
-          pytest tests/physics/test_h_free.py -v
+          pytest tests/test_authority.py tests/test_policy_and_federation.py tests/red_team_audit.py tests/physics/test_h_free.py -v

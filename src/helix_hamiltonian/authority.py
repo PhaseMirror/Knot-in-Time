@@ -1,20 +1,24 @@
 """
-Helix Hamiltonian Authority - Jurisdictional Ratification
-Integrates RFC 0001 v4 §6 Jurisdictional Mappings with v0.2 Interaction Logic.
+Authority and ratification helpers for RFC 0001 execution flow.
 """
 
+from __future__ import annotations
+
 from enum import Enum, auto
-from typing import Dict, Optional, Any
+from typing import Dict, Optional
+
 from .core import Interaction
 
-class AuthorityLevel(Enum):
-    """Hierarchical authority levels (RFC 0001 v4 §6)."""
-    CUSTODIAN = auto()  # Sovereign human/keyholder
-    POLICY = auto()     # System constraint layer
-    ADVISORY = auto()   # Model recommendation
 
-# --- YOUR CANADIAN JURISDICTIONAL MAPPINGS (RATIFIED) ---
-CANADIAN_AUTHORITY_MAPPING: Dict[str, list] = {
+class AuthorityLevel(Enum):
+    """Hierarchical authority levels."""
+
+    CUSTODIAN = auto()
+    POLICY = auto()
+    ADVISORY = auto()
+
+
+CANADIAN_AUTHORITY_MAPPING: Dict[str, list[str]] = {
     "CUSTODIAN_CA_FED": ["TBS", "RCMP", "CSE"],
     "POLICY_CA_FED": ["GC_AUDIT", "TBS_POLICY"],
     "CUSTODIAN_CA_DEFENCE": ["DND", "CSE"],
@@ -27,40 +31,81 @@ CANADIAN_AUTHORITY_MAPPING: Dict[str, list] = {
     "CUSTODIAN_ITAR": ["US_DDTC"],
 }
 
+GENERIC_AUTHORITIES = {
+    "CUSTODIAN",
+    "POLICY",
+    "ADVISORY",
+    "FEDERAL_AUDITOR",
+    "SYSADMIN",
+}
+
 AUTHORITY_LOCALIZATION: Dict[str, Dict[str, str]] = {
-    "CUSTODIAN": {"en": "CUSTODIAN", "fr": "DÉPOSITAIRE"},
+    "CUSTODIAN": {"en": "CUSTODIAN", "fr": "DEPOSITAIRE"},
     "POLICY": {"en": "POLICY", "fr": "POLITIQUE"},
     "ADVISORY": {"en": "ADVISORY", "fr": "CONSULTATIF"},
 }
 
-def ratify_interaction(interaction: Interaction, jurisdiction: Optional[str] = None) -> str:
+
+def classify_authority(authority: str) -> AuthorityLevel:
+    if authority.startswith("CUSTODIAN") or authority in {
+        "FEDERAL_AUDITOR",
+        "SYSADMIN",
+    }:
+        return AuthorityLevel.CUSTODIAN
+    if authority.startswith("POLICY"):
+        return AuthorityLevel.POLICY
+    return AuthorityLevel.ADVISORY
+
+
+def ratify_velocity(
+    model_recommended_velocity: str,
+    authority: str,
+    jurisdiction: Optional[str] = None,
+) -> str:
     """
-    Enforce the Ratification Rule (RFC 0001 v4 §6.2) on an Interaction Tuple.
-    - CUSTODIAN > POLICY > ADVISORY.
-    - Jurisdiction-specific defaults (e.g., Mandatory PAUSE for CA-QC/LAW_25).
+    Resolve effective velocity from the authority boundary.
     """
-    auth = interaction.authority
-    vel = interaction.velocity
 
-    # 1. Jurisdictional Invariant: Quebec Law 25 / CA-QC
-    if jurisdiction == "CA-QC" and "QC" in auth:
-        return vel  # Quebec custodians have full sovereign authority locally
+    level = classify_authority(authority)
 
-    # 2. Hierarchy Enforcement
-    if "CUSTODIAN" in auth:
-        return vel
-    
-    if "POLICY" in auth:
-        # Policy can only RATIFY a non-STOP velocity or force a PAUSE
-        return vel if vel != "STOP" else "PAUSE"
+    if jurisdiction == "CA-QC" and authority.startswith("CUSTODIAN"):
+        return model_recommended_velocity
 
-    # 3. Default Fail-Closed: ADVISORY/UNMAPPED
+    if level is AuthorityLevel.CUSTODIAN:
+        return model_recommended_velocity
+    if level is AuthorityLevel.POLICY:
+        return (
+            "PAUSE"
+            if model_recommended_velocity == "STOP"
+            else model_recommended_velocity
+        )
     return "PAUSE"
 
+
+def ratify_interaction(
+    interaction: Interaction, jurisdiction: Optional[str] = None
+) -> str:
+    return ratify_velocity(interaction.velocity, interaction.authority, jurisdiction)
+
+
 class JurisdictionalGuard:
-    """Verifies if an Interaction matches the Canadian Authority Mapping."""
-    
+    """Verifies that an interaction authority is mapped or explicitly generic."""
+
     @staticmethod
     def verify(interaction: Interaction) -> bool:
-        # Check if the authority string exists in the Federal/Provincial map
-        return any(interaction.authority in agents for agents in CANADIAN_AUTHORITY_MAPPING.values())
+        authority = interaction.authority
+        return (
+            authority in CANADIAN_AUTHORITY_MAPPING or authority in GENERIC_AUTHORITIES
+        )
+
+
+__all__ = [
+    "AUTHORITY_LOCALIZATION",
+    "AuthorityLevel",
+    "CANADIAN_AUTHORITY_MAPPING",
+    "GENERIC_AUTHORITIES",
+    "JurisdictionalGuard",
+    "classify_authority",
+    "ratify_interaction",
+    "ratify_velocity",
+]

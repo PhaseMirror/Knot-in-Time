@@ -1,4 +1,3 @@
-// schemas/gicd_schema.json
 {
   "gicd_scan": {
     "type": "object",
@@ -11,13 +10,22 @@
             "name": {"type": "string"},
             "status": {"enum": ["PASS", "FAIL"]},
             "details": {
-              "type": "object",
-              "properties": {
-                "jurisdiction": {"enum": ["CA-FED", "CA-QC", "CA-ON", "CA-INDIGENOUS"]},
-                "cloud_region": {"type": "string"}
-              }
+              "oneOf": [
+                {"type": "string"},
+                {
+                  "type": "object",
+                  "properties": {
+                    "jurisdiction": {
+                      "enum": ["CA-FED", "CA-QC", "CA-ON", "CA-INDIGENOUS"]
+                    },
+                    "cloud_region": {"type": "string"}
+                  },
+                  "additionalProperties": true
+                }
+              ]
             }
-          }
+          },
+          "required": ["status"]
         }
       }
     }

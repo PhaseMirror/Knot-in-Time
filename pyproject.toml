@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "helix-hamiltonian"
-version = "1.0.0b2"
+version = "1.0.1"
 authors = [
   { name="Stephen Hope", email="stephen@helixprojectai.com" },
 ]
@@ -19,8 +19,8 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com"
-"Bug Tracker" = "https://github.com/issues"
+"Homepage" = "https://github.com/helixprojectai-code/helix-hamiltonian"
+"Bug Tracker" = "https://github.com/helixprojectai-code/helix-hamiltonian/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

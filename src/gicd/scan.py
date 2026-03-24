@@ -40,13 +40,20 @@ def verify_jurisdiction(substrate: dict) -> dict:
 def run_gicd_scan(substrate: dict) -> dict:
     """
     Execute the mandatory GICD Epistemic Scan before Hamiltonian nucleation.
-    If any marker fails, the system triggers Mandatory Collapse.
     """
-    checks = {
-        "Authority Ambiguity": verify_authority(substrate),
-        "Incentive Misalignment": verify_incentives(substrate),
-        "Cost Externalization": verify_costs(substrate),
-        "Governance Capture": verify_governance(substrate),
-        "Jurisdiction Compliance": verify_jurisdiction(substrate),
+    check_fns = [
+        ("Authority Ambiguity", verify_authority),
+        ("Incentive Misalignment", verify_incentives),
+        ("Cost Externalization", verify_costs),
+        ("Governance Capture", verify_governance),
+        ("Jurisdiction Compliance", verify_jurisdiction),
+    ]
+    return {
+        "checks": [
+            {
+                "name": name,
+                **check_fn(substrate),
+            }
+            for name, check_fn in check_fns
+        ]
     }
-    return checks
