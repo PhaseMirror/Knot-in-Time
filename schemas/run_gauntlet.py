@@ -1,6 +1,4 @@
 import os
-import json
-from pathlib import Path
 from azure.ai.ml import MLClient
 from azure.identity import AzureCliCredential
 from azure.ai.ml.entities import BatchJob, ModelConfiguration
@@ -8,8 +6,8 @@ from azure.ai.ml.entities import BatchJob, ModelConfiguration
 # --- CONFIGURATION ---
 subscription_id = "cb387900-e533-41fc-b4c5-7d66621e11b2"
 resource_group = "rg-helix-deploy"
-workspace_name = "helix-deploy"   # <-- Replace with actual workspace name
-deployment_name = "DeepSeek-V3.2-global-batch"     # must match your batch deployment
+workspace_name = "helix-deploy"  # <-- Replace with actual workspace name
+deployment_name = "DeepSeek-V3.2-global-batch"  # must match your batch deployment
 local_input_file = r"Z:\helix-hamiltonian\schemas\mirror_traps.jsonl"
 
 # --- Optional: print PATH for debugging ---
@@ -50,9 +48,9 @@ job = BatchJob(
             "system_prompt": system_prompt,
             "temperature": 0.7,
             "max_tokens": 1024,
-            "stop": ["<|eot_id|>"]
-        }
-    )
+            "stop": ["<|eot_id|>"],
+        },
+    ),
 )
 
 print("Submitting batch job...")

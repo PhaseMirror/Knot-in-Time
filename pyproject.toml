@@ -25,3 +25,6 @@ classifiers = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.black]
+target-version = ["py311"]

@@ -3,7 +3,6 @@ from pathlib import Path
 
 from helix_hamiltonian import __version__
 
-
 REPO_ROOT = Path(r"Z:\helix-hamiltonian")
 
 
@@ -13,7 +12,10 @@ def test_repo_manifest_is_valid_and_version_aligned():
 
     assert manifest["repo"] == "helix-hamiltonian"
     assert manifest["version"] == __version__
-    assert manifest["canonical_documents"]["rfc_0001"] == "docs/sovereignty/RFC_0001-locked.md"
+    assert (
+        manifest["canonical_documents"]["rfc_0001"]
+        == "docs/sovereignty/RFC_0001-locked.md"
+    )
 
 
 def test_repo_manifest_verification_files_exist():

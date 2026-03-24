@@ -58,7 +58,9 @@ def test_gicd_scan_returns_schema_friendly_checks():
 
 
 def test_federation_handshake_and_consensus():
-    local = NodeState(node_id="alpha", drift_score=0.05, authority_level="CUSTODIAN_CA_FED")
+    local = NodeState(
+        node_id="alpha", drift_score=0.05, authority_level="CUSTODIAN_CA_FED"
+    )
     node_sync = NodeSync(local)
 
     assert node_sync.verify_peer(
