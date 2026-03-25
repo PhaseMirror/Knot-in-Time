@@ -1,5 +1,6 @@
 # requirements.txt
 # Helix-TTD v3.0 Base Dependencies
+numpy>=1.26.0
 pytest>=7.4.0
 jsonschema>=4.19.0
 pydantic>=2.4.0

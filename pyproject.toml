@@ -11,6 +11,7 @@ authors = [
 description = "Constitutional Architecture for Sovereign AI"
 readme = "README.md"
 requires-python = ">=3.10"
+dependencies = ["numpy>=1.26.0"]
 license = {text = "Apache-2.0"}
 keywords = ["constitutional-ai", "governance", "hamiltonian", "helix", "sovereign-ai"]
 classifiers = [
