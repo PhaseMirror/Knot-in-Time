@@ -3,7 +3,7 @@ from pathlib import Path
 
 from helix_hamiltonian import __version__
 
-REPO_ROOT = Path(r"Z:\helix-hamiltonian")
+REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_repo_manifest_is_valid_and_version_aligned():

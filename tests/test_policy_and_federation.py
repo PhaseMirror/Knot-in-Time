@@ -1,11 +1,16 @@
+from pathlib import Path
+
 from helix_hamiltonian import Interaction, NodeState, PolicyCompiler, TTDBridge
 from helix_hamiltonian.federation import FederationManager, LatticeConsensus, NodeSync
 from helix_hamiltonian.federation.node_sync import FEDERATION_BASELINE_VERSION
 from gicd.scan import run_gicd_scan
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+RULE_PATH = REPO_ROOT / "rules" / "cpcsc_itar.json"
+
 
 def test_policy_compiler_enforces_triggered_rule():
-    compiler = PolicyCompiler(r"Z:\helix-hamiltonian\rules\cpcsc_itar.json")
+    compiler = PolicyCompiler(str(RULE_PATH))
 
     allowed = Interaction(
         utterance="Proceed with protected action.",
@@ -27,7 +32,7 @@ def test_policy_compiler_enforces_triggered_rule():
 
 
 def test_bridge_honors_policy_compiler_violation():
-    compiler = PolicyCompiler(r"Z:\helix-hamiltonian\rules\cpcsc_itar.json")
+    compiler = PolicyCompiler(str(RULE_PATH))
     bridge = TTDBridge(
         {
             "node_id": "policy-node",
