@@ -44,9 +44,13 @@ class ZenoWardMonitor:
 
         if not all(diagnostic_markers.values()):
             self.logger.critical("GICD SCAN FAILED. Substrate integrity compromised.")
-            raise MandatoryCollapse("Agent nucleation aborted. Energy state shunted to 0.0.")
+            raise MandatoryCollapse(
+                "Agent nucleation aborted. Energy state shunted to 0.0."
+            )
 
-        self.logger.info("GICD Scan [PASS]. Human knot unbroken. Nucleating Hamiltonian.")
+        self.logger.info(
+            "GICD Scan [PASS]. Human knot unbroken. Nucleating Hamiltonian."
+        )
 
     def record_forward_pass(self, seq_omega_mask):
         """
