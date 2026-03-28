@@ -75,7 +75,7 @@ def pre_nucleation_check(gicd_payload: Dict[str, Any], token_ids: list) -> Dict[
         az_resp.raise_for_status()
         az_data = az_resp.json()
 
-    return {
+    result = {
         "status": "PASS",
         "reason": "All sovereign services cleared.",
         "attention_bias": aws_data.get("bias"),
@@ -88,6 +88,25 @@ def pre_nucleation_check(gicd_payload: Dict[str, Any], token_ids: list) -> Dict[
         "consensus_reached": az_data.get("consensus_reached"),
         "guardian_enabled": GUARDIAN_ENABLED,
     }
+
+    # Emit auditable receipt
+    try:
+        import sys
+        _receipt_path = os.getenv("GUARDIAN_PATH", "Z:/helix-ttd-gemini")
+        _physics_path = os.getenv("PHYSICS_GATE_PATH", "Z:/helix-physics-gate")
+        if _physics_path not in sys.path:
+            sys.path.insert(0, _physics_path)
+        from receipt import emit_receipt
+        emit_receipt(
+            gate="pre_nucleation_check",
+            inputs={"gicd_payload": gicd_payload, "token_ids": token_ids},
+            outputs=result,
+            receipt_dir=os.getenv("RECEIPT_DIR", "Z:/checksums/receipts")
+        )
+    except Exception:
+        pass  # Receipt emission is non-blocking
+
+    return result
 
 
 class TTDBridge:
