@@ -266,10 +266,13 @@ class MemoryKernel:
                     C[i, j] = coupling
                     C[j, i] = coupling
         
-        # Ensure contractive: spectral radius < 1
-        spectral_radius = np.max(np.abs(np.linalg.eigvals(C)))
-        if spectral_radius >= 1.0:
-            C = C / (spectral_radius + 0.01)
+        # Ensure contractive: inf-norm < 1 (required by LambdaProof)
+        # Note: spectral radius < 1 is necessary but not sufficient.
+        # The inf-norm (max row sum) is the Lipschitz constant for the
+        # contraction proof via submultiplicativity.
+        inf_norm = np.max(np.sum(np.abs(C), axis=1))
+        if inf_norm >= 1.0:
+            C = C / (inf_norm + 0.01)
         
         return C
     
