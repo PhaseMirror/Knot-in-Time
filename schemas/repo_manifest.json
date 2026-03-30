@@ -1,6 +1,6 @@
 {
   "repo": "helix-hamiltonian",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "canonical_documents": {
     "rfc_0001": "docs/sovereignty/RFC_0001-locked.md",
     "gicd_integration": "docs/sovereignty/gicd-integration.md",
