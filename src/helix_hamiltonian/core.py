@@ -61,11 +61,16 @@ class KnotHamiltonian:
     Lightweight Hamiltonian facade used by the docs, bridge, and tests.
     """
 
+    # Jones polynomial |V_K(e^{2πi/5})| for each knot type.
+    # Values from ADR-105 extended knot testing.
     KNOT_INVARIANTS = {
-        "0_1": 1.0,
-        "3_1": 1.618,
-        "4_1": 1.0,
-        "5_1": 2.118,
+        "0_1": 1.0,       # Unknot
+        "3_1": 1.4142,    # Trefoil — |J| = √2
+        "4_1": 2.6180,    # Figure-eight — |J| = φ + 1 (golden ratio + 1)
+        "5_1": 1.9890,    # Cinquefoil T(2,5)
+        "7_1": 2.2469,    # T(2,7) torus knot
+        "9_1": 2.4940,    # T(2,9) torus knot
+        "hopf": 1.9021,   # Hopf link (2-component)
     }
 
     def __init__(
