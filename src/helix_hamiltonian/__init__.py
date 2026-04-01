@@ -1,6 +1,6 @@
 """Public package surface for helix_hamiltonian."""
 
-__version__ = "1.0.1"
+__version__ = "1.2.0"
 
 from .authority import (
     AuthorityLevel,

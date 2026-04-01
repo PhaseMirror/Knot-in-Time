@@ -1,6 +1,6 @@
 {
   "repo": "helix-hamiltonian",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "canonical_documents": {
     "rfc_0001": "docs/sovereignty/RFC_0001-locked.md",
     "gicd_integration": "docs/sovereignty/gicd-integration.md",
@@ -16,7 +16,23 @@
       "PolicyCompiler",
       "TTDBridge",
       "SovereignBridge"
+    ],
+    "submodules": [
+      "helix_hamiltonian.gicd",
+      "helix_hamiltonian.federation"
     ]
+  },
+  "sibling_packages": {
+    "helix_sovereign": {
+      "version": "0.1.0",
+      "entrypoints": [
+        "FZSMKEngine",
+        "MemoryKernel",
+        "ZenoWardProjector",
+        "GICDScanner",
+        "create_sovereign_engine"
+      ]
+    }
   },
   "verification": {
     "tests": [
@@ -25,7 +41,7 @@
       "tests/red_team_audit.py",
       "tests/physics/test_h_free.py"
     ],
-    "lint": "ruff check src/helix_hamiltonian src/gicd/scan.py tests",
+    "lint": "ruff check src/helix_hamiltonian src/helix_sovereign tests",
     "ci_workflow": ".github/workflows/hamiltonian-ci.yml"
   }
 }

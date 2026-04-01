@@ -4,21 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "helix-hamiltonian"
-version = "1.0.1"
+version = "1.2.0"
 authors = [
   { name="Stephen Hope", email="stephen@helixprojectai.com" },
 ]
 description = "Constitutional Architecture for Sovereign AI"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["numpy>=1.26.0"]
-license = {text = "Apache-2.0"}
-keywords = ["constitutional-ai", "governance", "hamiltonian", "helix", "sovereign-ai"]
+dependencies = ["numpy>=1.26.0", "requests>=2.31.0"]
+license = "Apache-2.0"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
 ]
+
+keywords = ["constitutional-ai", "governance", "hamiltonian", "helix", "sovereign-ai"]
 
 [project.urls]
 "Homepage" = "https://github.com/helixprojectai-code/helix-hamiltonian"
