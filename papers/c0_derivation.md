@@ -145,25 +145,29 @@ Starting from arbitrary initial conditions g₀ = (0.5, 1.0, 10.0), the flow con
 
 ---
 
-## 5. The Base-Conversion Argument (Elementary Proof)
+## 5. Base-10 Scaling as Consequence (NOT a Derivation)
 
-The simplest proof requires no RG machinery:
+Once c₀ = ln(10) is established by the self-consistency condition (Section 3), the *consequence* is:
 
-**Theorem.** If the protection factor satisfies P(K) = 10^{c(K)} for all knots K, then c₀ = ln(10).
+$$P = e^{c_0 \cdot c(K)} = e^{\ln(10) \cdot c(K)} = 10^{c(K)}$$
 
-*Proof.*
+The base-10 scaling ("one decade per crossing") is an **output** of the derivation, not an input.
 
-$$P = e^{c_0 \cdot c(K)} = 10^{c(K)}$$
+**Circularity check (Lessard, 2026):** The concern is whether base-10 normalization is smuggled in upstream. Inspection confirms it is not:
+- S(n) = −Σ q_i **ln** q_i (natural log)
+- μ(n) = exp(−S(n)) (natural exponential)
+- L_p = c₀ · **ln**(p) / p (natural log)
+- ω_p = 2π / **ln**(p) (natural log)
+- The self-consistency condition ⟨L_p · ω_p⟩_μ = 1 is dimensionless
 
-Taking logarithms:
+No base-10 enters until the final interpretation step. The derivation chain is:
 
-$$c_0 \cdot c(K) = c(K) \cdot \ln(10)$$
+1. Erdős–Kac provides the measure μ (base-agnostic)
+2. Self-consistency determines c₀ numerically (base-agnostic)
+3. The numerical value equals ln(10) (empirical fact)
+4. THEREFORE P = 10^{c(K)} (consequence)
 
-Since c(K) > 0 for non-trivial knots:
-
-$$c_0 = \ln(10) \qquad \blacksquare$$
-
-The RG analysis shows this is not merely a definition but the unique self-consistent value: any other choice of c₀ would violate the prime-harmonic self-consistency condition, causing the RG flow to diverge rather than converge to a fixed point.
+Assuming P = 10^{c(K)} to derive c₀ = ln(10) would be circular. We do not do this.
 
 ---
 
@@ -171,7 +175,7 @@ The RG analysis shows this is not merely a definition but the unique self-consis
 
 | Route | Method | Result |
 |-------|--------|--------|
-| Operational | P = 10^{c(K)} | c₀ = ln(10) |
+| Operational | P = 10^{c(K)} | c₀ = ln(10) | **Consequence**, not derivation |
 | Self-consistency | ⟨L_p · ω_p⟩_μ = 1 | c₀ = ln(10) |
 | RG stability | λ₁ = π · c₀ = naive SlopeUB | c₀ = ln(10) |
 | Numerical | Bisection over primes ≤ 10,000 | c₀ = 2.30258509... |
