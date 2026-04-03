@@ -1,7 +1,7 @@
 # THE PRIME MATERIA OPEN COMMONS AND BOUND WORKS LICENSE
 
 ## Version 1.0
-
+The software modifications mentioned in this folder are subject to the following license terms:
 ```
 ═══════════════════════════════════════════════════════════════════════════════
 THE PRIME MATERIA OPEN COMMONS AND BOUND WORKS LICENSE
@@ -10,7 +10,7 @@ Version 1.0
 Steward:    Citizen Gardens, a 501(c)(3) nonprofit organization
 Founder:    Ryan O. Van Gelder, Lead Multiplicity Theorist
 Registry:   Operator Atlas — operatoratlas.citizengardens.org
-Repository: github.com/MultiplicityFoundation/PIRTM
+Repository: github.com/MultiplicityFoundation/PhaseMirror-HQ/helix/docs/modifications/
 Effective:  March 2026
 
 This instrument consists of three coordinate parts:
@@ -909,7 +909,7 @@ Section 8. General Terms
      Declaration filing:    operatoratlas.citizengardens.org/declare
      Public registry query: operatoratlas.citizengardens.org/query
      Conformance program:   citizengardens.org/conformance
-     GitHub:                github.com/MultiplicityFoundation/PIRTM
+     GitHub:                github.com/MultiplicityFoundation/PhaseMirror-HQ/helix/docs/modifications/
 ```
 
 
